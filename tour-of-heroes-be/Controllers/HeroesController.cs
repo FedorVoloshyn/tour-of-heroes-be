@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using tour_of_heroes_be.Models;
+using tour_of_heroes_be.Services;
 
 namespace tour_of_heroes_be.Controllers
 {
@@ -14,38 +15,42 @@ namespace tour_of_heroes_be.Controllers
     public class HeroesController : ControllerBase
     {
         private readonly HeroContext _context;
+        IHeroesService HeroService { get; }
 
-        public HeroesController(HeroContext context)
+        public HeroesController(HeroContext context, IHeroesService heroService)
         {
             _context = context;
+            HeroService = heroService;
         }
 
         // GET: api/Heroes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Hero>>> GetTodoItems()
+        public async Task<ActionResult> GetAllHeroes()
         {
-            return await _context.TodoItems.ToListAsync();
+            var result = await HeroService.GetHeroesAsync();
+
+            return Ok(result);
         }
 
         // GET: api/Heroes/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Hero>> GetHero(long id)
+        public async Task<ActionResult> GetHero(int id)
         {
-            var hero = await _context.TodoItems.FindAsync(id);
+            var result = await HeroService.GetHeroAsync(id);
 
-            if (hero == null)
+            if (result == null)
             {
                 return NotFound();
             }
 
-            return hero;
+            return Ok(result);
         }
 
         // PUT: api/Heroes/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutHero(long id, Hero hero)
+        public async Task<IActionResult> PutHero(int id, Hero hero)
         {
             if (id != hero.Id)
             {
@@ -79,7 +84,7 @@ namespace tour_of_heroes_be.Controllers
         [HttpPost]
         public async Task<ActionResult<Hero>> PostHero(Hero hero)
         {
-            _context.TodoItems.Add(hero);
+            _context.Heroes.Add(hero);
             await _context.SaveChangesAsync();
 
             // return CreatedAtAction("GetHero", new { id = hero.Id }, hero);
@@ -88,23 +93,23 @@ namespace tour_of_heroes_be.Controllers
 
         // DELETE: api/Heroes/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Hero>> DeleteHero(long id)
+        public async Task<ActionResult<Hero>> DeleteHero(int id)
         {
-            var hero = await _context.TodoItems.FindAsync(id);
+            var hero = await _context.Heroes.FindAsync(id);
             if (hero == null)
             {
                 return NotFound();
             }
 
-            _context.TodoItems.Remove(hero);
+            _context.Heroes.Remove(hero);
             await _context.SaveChangesAsync();
 
             return hero;
         }
 
-        private bool HeroExists(long id)
+        private bool HeroExists(int id)
         {
-            return _context.TodoItems.Any(e => e.Id == id);
+            return _context.Heroes.Any(e => e.Id == id);
         }
     }
 }

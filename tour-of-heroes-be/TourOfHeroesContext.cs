@@ -1,15 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using tour_of_heroes_be.Models;
+using tour_of_heroes_be.Repositories;
 
-namespace tour_of_heroes_be.Models
+namespace tour_of_heroes_be
 {
-    public class HeroContext : DbContext
+    public class TourOfHeroesContext : DbContext
     {
-        public HeroContext(DbContextOptions<HeroContext> options)
+        public TourOfHeroesContext(DbContextOptions options)
             : base(options)
         {
+            System.Diagnostics.Debug.WriteLine($"Create '{nameof(TourOfHeroesContext)}' instance: {GetHashCode()}");
         }
 
         public DbSet<Hero> Heroes { get; set; }
