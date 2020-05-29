@@ -38,7 +38,7 @@ namespace tour_of_heroes_be
         }
 
         protected virtual DbContextOptions CreateDbContextOptions() =>
-            new DbContextOptionsBuilder<HeroContext>()
+            new DbContextOptionsBuilder<TourOfHeroesContext>()
             .UseSqlServer(CreateDbConnection())
             .Options;
 

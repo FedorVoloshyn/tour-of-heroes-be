@@ -14,12 +14,10 @@ namespace tour_of_heroes_be.Controllers
     [ApiController]
     public class HeroesController : ControllerBase
     {
-        private readonly HeroContext _context;
         IHeroesService HeroService { get; }
 
-        public HeroesController(HeroContext context, IHeroesService heroService)
+        public HeroesController(IHeroesService heroService)
         {
-            _context = context;
             HeroService = heroService;
         }
 
@@ -52,30 +50,7 @@ namespace tour_of_heroes_be.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutHero(int id, Hero hero)
         {
-            if (id != hero.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(hero).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!HeroExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            return NotFound();
         }
 
         // POST: api/Heroes
@@ -84,32 +59,14 @@ namespace tour_of_heroes_be.Controllers
         [HttpPost]
         public async Task<ActionResult<Hero>> PostHero(Hero hero)
         {
-            _context.Heroes.Add(hero);
-            await _context.SaveChangesAsync();
-
-            // return CreatedAtAction("GetHero", new { id = hero.Id }, hero);
-            return CreatedAtAction(nameof(GetHero), new { id = hero.Id }, hero);
+            return NotFound();
         }
 
         // DELETE: api/Heroes/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Hero>> DeleteHero(int id)
         {
-            var hero = await _context.Heroes.FindAsync(id);
-            if (hero == null)
-            {
-                return NotFound();
-            }
-
-            _context.Heroes.Remove(hero);
-            await _context.SaveChangesAsync();
-
-            return hero;
-        }
-
-        private bool HeroExists(int id)
-        {
-            return _context.Heroes.Any(e => e.Id == id);
+            return NotFound();
         }
     }
 }

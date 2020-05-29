@@ -6,7 +6,6 @@ using tour_of_heroes_be.Models;
 
 namespace tour_of_heroes_be.Services
 {
-    [Service]
     internal class HeroesService : IHeroesService
     {
         public HeroesService(IDataContextFactory dataContextFactory)

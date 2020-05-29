@@ -22,11 +22,7 @@ namespace tour_of_heroes_be
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // DI config
-            services.AddScoped<IHeroesService, HeroesService>();
-            services.AddScoped<IDataContext, DataContext>();
-            services.AddScoped<IDataContextFactory, DataContextFactory>();
-            services.AddScoped<TourOfHeroesContext>();
+            services.AddDbContext<TourOfHeroesContext>(options => options.UseSqlServer(Configuration["Database:ConnectionString"]));
 
             services.AddCors(options =>
             {
@@ -39,8 +35,11 @@ namespace tour_of_heroes_be
                         .AllowCredentials());
             });
 
-            services.AddDbContext<HeroContext>(options => options.UseSqlServer(Configuration["Database:ConnectionString"]));
             services.AddControllers();
+
+            // DI config
+            services.AddScoped<IDataContextFactory, DataContextFactory>();
+            services.AddScoped<IHeroesService, HeroesService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
