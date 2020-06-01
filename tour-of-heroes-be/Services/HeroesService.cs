@@ -37,5 +37,31 @@ namespace tour_of_heroes_be.Services
                 await dataContext.SaveAsync();
             }
         }
+
+        public async Task<int> AddHeroAsync(Hero hero)
+        {
+            using (var dataContext = DataContextFactory.CreateContext())
+            {
+                dataContext.Heroes.Add(hero);
+
+                await dataContext.SaveAsync();
+            }
+
+            return hero.Id;
+        }
+
+        public async Task DeleteHeroAsync(int id)
+        {
+            using (var dataContext = DataContextFactory.CreateContext())
+            {
+                var hero = (await dataContext.Heroes.GetAsync(h => h.Id == id)).SingleOrDefault();
+                if (hero == null)
+                    throw new Exception($"Hero {id} not found!");
+
+                dataContext.Heroes.Delete(hero);
+
+                await dataContext.SaveAsync();
+            }
+        }
     }
 }

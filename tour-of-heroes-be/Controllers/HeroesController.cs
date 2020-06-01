@@ -69,14 +69,18 @@ namespace tour_of_heroes_be.Controllers
         [HttpPost]
         public async Task<ActionResult<Hero>> PostHero(Hero hero)
         {
-            return NotFound();
+            await HeroService.AddHeroAsync(hero);
+
+            return Ok(hero.Id);
         }
 
         // DELETE: api/Heroes/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Hero>> DeleteHero(int id)
         {
-            return NotFound();
+            await HeroService.DeleteHeroAsync(id);
+
+            return Ok();
         }
     }
 }
