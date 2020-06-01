@@ -22,6 +22,17 @@ namespace tour_of_heroes_be
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
+
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", options =>
+                {
+                    options.Authority = "https://localhost:5001";
+                    options.RequireHttpsMetadata = false;
+
+                    options.Audience = "api1";
+                });
+
             var cs = Configuration["Database:ConnectionString"];
             services.AddDbContext<TourOfHeroesContext>(options => options.UseSqlServer(Configuration["Database:ConnectionString"]));
 
@@ -35,8 +46,6 @@ namespace tour_of_heroes_be
                         .AllowAnyHeader()
                         .AllowCredentials());
             });
-
-            services.AddControllers();
 
             // DI config
             services.AddScoped<IDataContextFactory, DataContextFactory>();
@@ -54,6 +63,7 @@ namespace tour_of_heroes_be
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
