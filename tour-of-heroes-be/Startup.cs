@@ -22,6 +22,7 @@ namespace tour_of_heroes_be
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var cs = Configuration["Database:ConnectionString"];
             services.AddDbContext<TourOfHeroesContext>(options => options.UseSqlServer(Configuration["Database:ConnectionString"]));
 
             services.AddCors(options =>

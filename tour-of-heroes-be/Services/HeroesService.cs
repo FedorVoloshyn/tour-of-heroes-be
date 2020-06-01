@@ -27,5 +27,15 @@ namespace tour_of_heroes_be.Services
                 return (await dataContext.Heroes
                     .GetAsync(h => h.Id == id)).SingleOrDefault();
         }
+
+        public async Task PutHeroAsync(Hero hero)
+        {
+            using (var dataContext = DataContextFactory.CreateContext())
+            {
+                dataContext.Heroes.Update(hero);
+
+                await dataContext.SaveAsync();
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ namespace tour_of_heroes_be
         public void Save() =>
             _dbContext.SaveChanges();
 
-        public async Task SaveAsync() =>
-            await _dbContext.SaveChangesAsync();
+        public async Task SaveAsync(CancellationToken cancellationToken = default) =>
+            await _dbContext.SaveChangesAsync(cancellationToken);
     }
 }

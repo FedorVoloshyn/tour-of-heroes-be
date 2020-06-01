@@ -50,7 +50,17 @@ namespace tour_of_heroes_be.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutHero(int id, Hero hero)
         {
-            return NotFound();
+            try
+            {
+                await HeroService.PutHeroAsync(hero);
+            }
+            catch(Exception ex)
+            {
+                var exmess = ex.Message;
+                return StatusCode(500);
+            }
+
+            return Ok();
         }
 
         // POST: api/Heroes

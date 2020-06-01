@@ -10,5 +10,6 @@ namespace tour_of_heroes_be.Services
     {
         Task<IEnumerable<Hero>> GetHeroesAsync();
         Task<Hero> GetHeroAsync(int id);
+        Task PutHeroAsync(Hero hero);
     }
 }

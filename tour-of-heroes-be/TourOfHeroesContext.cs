@@ -51,5 +51,18 @@ namespace tour_of_heroes_be
                 }
             }
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.AddSoftDeletion();
+
+            modelBuilder
+                .Entity<Hero>()
+                .HasIndex("Name", "Removed")
+                .HasFilter(null)
+                .IsUnique();
+        }
     }
 }

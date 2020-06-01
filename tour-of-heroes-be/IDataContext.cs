@@ -2,6 +2,7 @@
 using tour_of_heroes_be.Repositories;
 using tour_of_heroes_be.Models;
 using System;
+using System.Threading;
 
 namespace tour_of_heroes_be
 {
@@ -9,6 +10,6 @@ namespace tour_of_heroes_be
     {
         IBaseRepository<Hero> Heroes { get; }
         void Save();
-        Task SaveAsync();
+        Task SaveAsync(CancellationToken cancellationToken = default);
     }
 }

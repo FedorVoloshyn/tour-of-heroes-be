@@ -17,7 +17,7 @@ namespace tour_of_heroes_be
             if (configuration == null)
                 throw new ArgumentNullException(nameof(configuration));
 
-            ConnectionString = configuration.GetValue("Database", "ConnectionString");
+            ConnectionString = configuration["Database:ConnectionString"];
         }
 
         protected string ConnectionString { get; }
@@ -31,16 +31,30 @@ namespace tour_of_heroes_be
 
         protected internal virtual DbContext CreateDbContext()
         {
-            var heroesDbContext = new TourOfHeroesContext(CreateDbContextOptions());
+            var contextOptions = CreateDbContextOptions();
+            var heroesDbContext = new TourOfHeroesContext(contextOptions);
             heroesDbContext.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
 
             return heroesDbContext;
         }
 
-        protected virtual DbContextOptions CreateDbContextOptions() =>
-            new DbContextOptionsBuilder<TourOfHeroesContext>()
-            .UseSqlServer(CreateDbConnection())
-            .Options;
+        protected virtual DbContextOptions CreateDbContextOptions()
+        {
+            try
+            {
+                var result = new DbContextOptionsBuilder<TourOfHeroesContext>()
+                                .UseSqlServer(CreateDbConnection())
+                                .Options;
+
+                return result;
+            }
+            catch(Exception ex)
+            {
+                var error = ex.Message;
+                return null;
+            }
+        }
+
 
         protected virtual DbConnection CreateDbConnection() =>
             new SqlConnection(ConnectionString);
