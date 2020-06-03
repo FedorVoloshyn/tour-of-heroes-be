@@ -19,7 +19,7 @@ namespace AuthServer
         {
             return new List<ApiResource>
             {
-                new ApiResource("resourceapi", "Resource API")
+                new ApiResource("tourofheroesapi", "Tour Of Heroes API")
                 {
                     Scopes = {new Scope("api.read")}
                 }
@@ -32,8 +32,8 @@ namespace AuthServer
             {
                 new Client {
                     RequireConsent = false,
-                    ClientId = "angular_spa",
-                    ClientName = "Angular SPA",
+                    ClientId = "tour_of_heroes_spa",
+                    ClientName = "Tour Of Heroes",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     AllowedScopes = { "openid", "profile", "email", "api.read" },
                     RedirectUris = {"http://localhost:4200/auth-callback"},

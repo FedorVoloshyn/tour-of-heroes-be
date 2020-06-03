@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AuthServer.Infrastructure.Constants
+﻿namespace AuthServer.Infrastructure.Constants
 {
-    class Roles
+    public static class Roles
     {
         public const string Consumer = "consumer";
+        public const string Admin = "admin";
     }
 }

@@ -32,7 +32,7 @@ namespace AuthServer.Infrastructure.Data
 
             var config = builder.Build();
 
-            var connstr = config.GetConnectionString("Default");
+            var connstr = config["Database:ConnectionString"];
 
             if (string.IsNullOrWhiteSpace(connstr))
             {

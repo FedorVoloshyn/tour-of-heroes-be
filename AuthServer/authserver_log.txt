@@ -1,0 +1,107 @@
+2020-06-03 16:04:56.952 +03:00 [INF] Starting IdentityServer4 version 3.1.3.0
+2020-06-03 16:05:52.475 +03:00 [INF] Starting IdentityServer4 version 3.1.3.0
+2020-06-03 16:05:53.098 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2020-06-03 16:10:59.329 +03:00 [INF] Starting IdentityServer4 version 3.1.3.0
+2020-06-03 16:10:59.529 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2020-06-03 16:13:52.131 +03:00 [INF] Starting IdentityServer4 version 3.1.3.0
+2020-06-03 16:13:52.824 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2020-06-03 16:14:24.915 +03:00 [INF] Removing 0 grants
+2020-06-03 16:14:24.934 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:14:55.025 +03:00 [INF] Removing 0 grants
+2020-06-03 16:14:55.030 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:15:25.084 +03:00 [INF] Removing 0 grants
+2020-06-03 16:15:25.087 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:16:09.846 +03:00 [INF] Starting IdentityServer4 version 3.1.3.0
+2020-06-03 16:16:10.269 +03:00 [INF] Using the default authentication scheme Identity.Application for IdentityServer
+2020-06-03 16:16:41.642 +03:00 [INF] Removing 0 grants
+2020-06-03 16:16:41.659 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:17:11.747 +03:00 [INF] Removing 0 grants
+2020-06-03 16:17:11.750 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:17:41.800 +03:00 [INF] Removing 0 grants
+2020-06-03 16:17:41.808 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:18:11.849 +03:00 [INF] Removing 0 grants
+2020-06-03 16:18:11.861 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:18:41.922 +03:00 [INF] Removing 0 grants
+2020-06-03 16:18:41.927 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:19:11.966 +03:00 [INF] Removing 0 grants
+2020-06-03 16:19:11.980 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:19:42.034 +03:00 [INF] Removing 0 grants
+2020-06-03 16:19:42.043 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:20:12.096 +03:00 [INF] Removing 0 grants
+2020-06-03 16:20:12.113 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:20:42.187 +03:00 [INF] Removing 0 grants
+2020-06-03 16:20:42.194 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:21:12.218 +03:00 [INF] Removing 0 grants
+2020-06-03 16:21:12.227 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:21:42.268 +03:00 [INF] Removing 0 grants
+2020-06-03 16:21:42.282 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:22:12.330 +03:00 [INF] Removing 0 grants
+2020-06-03 16:22:12.342 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:22:42.366 +03:00 [INF] Removing 0 grants
+2020-06-03 16:22:42.376 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:23:12.393 +03:00 [INF] Removing 0 grants
+2020-06-03 16:23:12.400 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:23:42.431 +03:00 [INF] Removing 0 grants
+2020-06-03 16:23:42.443 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:24:12.482 +03:00 [INF] Removing 0 grants
+2020-06-03 16:24:12.499 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:24:42.537 +03:00 [INF] Removing 0 grants
+2020-06-03 16:24:42.546 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:25:12.586 +03:00 [INF] Removing 0 grants
+2020-06-03 16:25:12.606 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:25:42.634 +03:00 [INF] Removing 0 grants
+2020-06-03 16:25:42.643 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:26:12.679 +03:00 [INF] Removing 0 grants
+2020-06-03 16:26:12.690 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:26:42.720 +03:00 [INF] Removing 0 grants
+2020-06-03 16:26:42.730 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:27:12.742 +03:00 [INF] Removing 0 grants
+2020-06-03 16:27:12.758 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:27:42.785 +03:00 [INF] Removing 0 grants
+2020-06-03 16:27:42.793 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:28:12.821 +03:00 [INF] Removing 0 grants
+2020-06-03 16:28:12.834 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:28:42.863 +03:00 [INF] Removing 0 grants
+2020-06-03 16:28:42.877 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:29:12.895 +03:00 [INF] Removing 0 grants
+2020-06-03 16:29:12.907 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:29:42.944 +03:00 [INF] Removing 0 grants
+2020-06-03 16:29:42.952 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:30:12.971 +03:00 [INF] Removing 0 grants
+2020-06-03 16:30:13.004 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:30:43.024 +03:00 [INF] Removing 0 grants
+2020-06-03 16:30:43.038 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:31:13.061 +03:00 [INF] Removing 0 grants
+2020-06-03 16:31:13.081 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:31:43.140 +03:00 [INF] Removing 0 grants
+2020-06-03 16:31:43.149 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:32:13.169 +03:00 [INF] Removing 0 grants
+2020-06-03 16:32:13.175 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:32:43.193 +03:00 [INF] Removing 0 grants
+2020-06-03 16:32:43.200 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:33:13.210 +03:00 [INF] Removing 0 grants
+2020-06-03 16:33:13.216 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:33:43.266 +03:00 [INF] Removing 0 grants
+2020-06-03 16:33:43.270 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:34:13.293 +03:00 [INF] Removing 0 grants
+2020-06-03 16:34:13.301 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:34:43.343 +03:00 [INF] Removing 0 grants
+2020-06-03 16:34:43.353 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:35:13.383 +03:00 [INF] Removing 0 grants
+2020-06-03 16:35:13.392 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:35:43.419 +03:00 [INF] Removing 0 grants
+2020-06-03 16:35:43.474 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:36:13.492 +03:00 [INF] Removing 0 grants
+2020-06-03 16:36:13.500 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:36:43.563 +03:00 [INF] Removing 0 grants
+2020-06-03 16:36:43.580 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:37:13.604 +03:00 [INF] Removing 0 grants
+2020-06-03 16:37:13.619 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:37:43.651 +03:00 [INF] Removing 0 grants
+2020-06-03 16:37:43.666 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:38:13.705 +03:00 [INF] Removing 0 grants
+2020-06-03 16:38:13.719 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:38:43.732 +03:00 [INF] Removing 0 grants
+2020-06-03 16:38:43.742 +03:00 [INF] Removing 0 device flow codes
+2020-06-03 16:39:13.766 +03:00 [INF] Removing 0 grants
+2020-06-03 16:39:13.811 +03:00 [INF] Removing 0 device flow codes
