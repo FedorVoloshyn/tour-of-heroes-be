@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using AuthServer.Infrastructure.Constants;
-using AuthServer.Infrastructure.Data.Identity;
+using AuthServer.Constants;
+using AuthServer.Data.Identity;
 using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Extensions;
@@ -10,7 +10,7 @@ using IdentityServer4.Models;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 
-namespace AuthServer.Infrastructure.Services
+namespace AuthServer.Services
 {
     public class IdentityClaimsProfileService : IProfileService
     {

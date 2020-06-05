@@ -1,4 +1,4 @@
-﻿namespace AuthServer.Infrastructure.Constants
+﻿namespace AuthServer.Constants
 {
     public static class Roles
     {

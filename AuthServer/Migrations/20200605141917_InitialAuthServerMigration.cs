@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace AuthServer.Infrastructure.Migrations
+namespace AuthServer.Migrations
 {
-    public partial class initial : Migration
+    public partial class InitialAuthServerMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -156,7 +156,7 @@ namespace AuthServer.Infrastructure.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "0e5fe369-b6cb-4e0b-aec9-0bf376b26b83", "8bdf9de6-6051-4cab-ab65-7e054ec2a435", "consumer", "CONSUMER" });
+                values: new object[] { "e53113b2-d06a-45a2-bdbf-27ac97900e20", "8c179b4a-7c6f-4869-803e-4786a82b3bd2", "consumer", "CONSUMER" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

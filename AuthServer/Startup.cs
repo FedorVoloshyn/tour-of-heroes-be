@@ -1,6 +1,6 @@
 using AuthServer.Extensions;
-using AuthServer.Infrastructure.Data.Identity;
-using AuthServer.Infrastructure.Services;
+using AuthServer.Data.Identity;
+using AuthServer.Services;
 using IdentityServer4.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
@@ -103,7 +103,7 @@ namespace AuthServer
             var serilog = new LoggerConfiguration()
                 .MinimumLevel.Verbose()
                 .Enrich.FromLogContext()
-                .WriteTo.File(@"authserver_log.txt");
+                .WriteTo.File(@"authserver_log.log");
 
             loggerFactory.WithFilter(new FilterLoggerSettings
                 {

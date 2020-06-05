@@ -1,4 +1,4 @@
-﻿using AuthServer.Infrastructure.Data.Identity;
+﻿using AuthServer.Data.Identity;
 
 namespace AuthServer.Models
 {

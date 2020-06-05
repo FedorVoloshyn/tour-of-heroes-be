@@ -1,7 +1,7 @@
-﻿using AuthServer.Infrastructure.Data.Identity;
+﻿using AuthServer.Data.Identity;
 using Microsoft.AspNetCore.Mvc;
 using AuthServer.Models;
-using AuthServer.Infrastructure.Constants;
+using AuthServer.Constants;
 using System.Threading.Tasks;
 using IdentityServer4.Services;
 using System.Linq;
