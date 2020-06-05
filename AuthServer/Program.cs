@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace tour_of_heroes_be
+namespace AuthServer
 {
     public class Program
     {
@@ -13,6 +13,6 @@ namespace tour_of_heroes_be
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5050");
+                .UseUrls("http://localhost:5000");
     }
 }

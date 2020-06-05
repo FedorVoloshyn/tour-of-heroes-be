@@ -1,18 +1,18 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using tour_of_heroes_be.Models;
 using tour_of_heroes_be.Services;
+using System.Security.Claims;
 
 namespace tour_of_heroes_be
 {
     public class Startup
     {
-        const string CorsKey = "Access-Control-Allow-Origin";
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -22,21 +22,32 @@ namespace tour_of_heroes_be
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var cs = Configuration["Database:ConnectionString"];
             services.AddDbContext<TourOfHeroesContext>(options => options.UseSqlServer(Configuration["Database:ConnectionString"]));
 
-            services.AddCors(options =>
+            services.AddAuthentication(options =>
             {
-                var origins = Configuration.GetSection("Origins").Get<string[]>();
-
-                options.AddPolicy(CorsKey, builder =>
-                    builder.WithOrigins(origins)
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials());
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(o =>
+            {
+                o.Authority = "http://localhost:5000";
+                o.Audience = "tourofheroesapi";
+                o.RequireHttpsMetadata = false;
+            });
+        
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("ApiReader", policy => policy.RequireClaim("scope", "api.read"));
+                options.AddPolicy("Consumer", policy => policy.RequireClaim(ClaimTypes.Role, "consumer"));
             });
 
-            services.AddControllers();
+            services.AddMvc(options =>
+            {
+                options.EnableEndpointRouting = false;
+            })
+                .SetCompatibilityVersion(CompatibilityVersion.Latest);
+
+            // services.AddControllers();
 
             // DI config
             services.AddScoped<IDataContextFactory, DataContextFactory>();
@@ -50,16 +61,17 @@ namespace tour_of_heroes_be
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseCors(CorsKey);
+            app.UseCors(options => options.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
-            app.UseRouting();
+            app.UseAuthentication();
 
-            app.UseAuthorization();
-
+            app.UseMvc();
+            /* 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+            */
         }
     }
 }
