@@ -1,6 +1,6 @@
 using System;
 
-namespace tour_of_heroes_be
+namespace TourOfHeroes
 {
     public class WeatherForecast
     {

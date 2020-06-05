@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using tour_of_heroes_be;
+using TourOfHeroes;
 
-namespace tour_of_heroes_be.Migrations
+namespace TourOfHeroes.Migrations
 {
     [DbContext(typeof(TourOfHeroesContext))]
     [Migration("20200603115012_Initial")]

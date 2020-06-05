@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace tour_of_heroes_be.Controllers
+namespace TourOfHeroes.Controllers
 {
     [ApiController]
     [Route("[controller]")]

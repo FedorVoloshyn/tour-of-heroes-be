@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using tour_of_heroes_be.Models;
-using tour_of_heroes_be.Repositories;
+using TourOfHeroes.Models;
+using TourOfHeroes.Repositories;
 
-namespace tour_of_heroes_be
+namespace TourOfHeroes
 {
     public class TourOfHeroesContext : DbContext
     {

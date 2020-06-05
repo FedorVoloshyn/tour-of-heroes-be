@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using tour_of_heroes_be.Models;
+using TourOfHeroes.Models;
 
-namespace tour_of_heroes_be.Services
+namespace TourOfHeroes.Services
 {
     public interface IHeroesService
     {

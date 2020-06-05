@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace tour_of_heroes_be.Migrations
+namespace TourOfHeroes.Migrations
 {
     public partial class Initial : Migration
     {

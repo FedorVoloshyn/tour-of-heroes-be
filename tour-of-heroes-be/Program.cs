@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace tour_of_heroes_be
+namespace TourOfHeroes
 {
     public class Program
     {

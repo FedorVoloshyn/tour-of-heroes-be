@@ -6,10 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using tour_of_heroes_be.Services;
+using TourOfHeroes.Services;
 using System.Security.Claims;
 
-namespace tour_of_heroes_be
+namespace TourOfHeroes
 {
     public class Startup
     {

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace tour_of_heroes_be.Models
+namespace TourOfHeroes.Models
 {
     public class Hero
     {

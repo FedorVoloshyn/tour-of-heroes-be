@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace tour_of_heroes_be.Services
+namespace TourOfHeroes.Services
 {
     /// <summary>
     /// Attribute used for automatic type registration

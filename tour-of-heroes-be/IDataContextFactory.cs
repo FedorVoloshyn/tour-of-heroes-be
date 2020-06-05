@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace tour_of_heroes_be
+namespace TourOfHeroes
 {
     interface IDataContextFactory
     {

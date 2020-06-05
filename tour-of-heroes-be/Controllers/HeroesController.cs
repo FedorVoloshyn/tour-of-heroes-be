@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using tour_of_heroes_be.Models;
-using tour_of_heroes_be.Services;
+using TourOfHeroes.Models;
+using TourOfHeroes.Services;
 
-namespace tour_of_heroes_be.Controllers
+namespace TourOfHeroes.Controllers
 {
     [Authorize(Policy = "ApiReader")]
     [Route("api/[controller]")]

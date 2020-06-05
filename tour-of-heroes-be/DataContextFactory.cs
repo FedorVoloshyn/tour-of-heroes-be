@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Threading.Tasks;
-using tour_of_heroes_be.Models;
+using TourOfHeroes.Models;
 
-namespace tour_of_heroes_be
+namespace TourOfHeroes
 {
     internal class DataContextFactory : IDataContextFactory
     {

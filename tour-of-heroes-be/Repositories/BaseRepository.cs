@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace tour_of_heroes_be.Repositories
+namespace TourOfHeroes.Repositories
 {
     internal class BaseRepository<T> : IBaseRepository<T> where T : class
     {
